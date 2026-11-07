@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Waste Analytics & Circular AI Pipeline</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for professional appearance -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-zone">
+                <span class="logo-icon">♻️</span>
+                <div>
+                    <h1>EcoStream Intel</h1>
+                    <p>Industrial Material Operations & Circular Forecasting Engine</p>
+                </div>
+            </div>
+            <div class="system-status">
+                <span class="status-indicator"></span> Core Engine Active (Safe Mode)
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-grid">
+        <!-- Left Control Area: Inputs & Pipeline Simulation -->
+        <section class="card control-card">
+            <h2>⚙️ Pipeline Operational Control</h2>
+            <p class="subtitle">Simulate real-time factory logs into the ML model pipeline.</p>
+            
+            <form id="pipeline-form">
+                <div class="form-group">
+                    <label for="facility">Source Production Facility</label>
+                    <select id="facility" required>
+                        <option value="Textile-Plant-Alpha">Textile-Plant-Alpha</option>
+                        <option value="Automotive-Assembly-B">Automotive-Assembly-B</option>
+                        <option value="Chemicals-Unit-Z">Chemicals-Unit-Z</option>
+                        <option value="Food-Pack-Delta">Food-Pack-Delta</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="material">Logged Waste Product</label>
+                    <select id="material" required>
+                        <option value="Single-Use-Plastic">Single-Use-Plastic</option>
+                        <option value="Scrap-Aluminium">Scrap-Aluminium</option>
+                        <option value="Organic-Sludge">Organic-Sludge</option>
+                        <option value="Cardboard-Boxes">Cardboard-Boxes</option>
+                        <option value="Toxic-Solvents">Toxic-Solvents</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mass">Material Mass Volume (KG)</label>
+                    <input type="number" id="mass" min="10" max="1000" value="450" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">⚡ Execute Predictor Pipeline</button>
+            </form>
+        </section>
+
+        <!-- Center Display Area: Metrics & Charts -->
+        <section class="metrics-display-zone">
+            <!-- Summary Metric Cards -->
+            <div class="metrics-row">
+                <div class="metric-mini-card">
+                    <h3>ML Cost Forecast</h3>
+                    <p class="metric-val" id="forecast-output">$0.00 <span class="currency">USD</span></p>
+                    <span class="badge badge-blue">Deterministic Model</span>
+                </div>
+                <div class="metric-mini-card">
+                    <h3>Mitigation Index</h3>
+                    <p class="metric-val" id="mitigation-output">0.00</p>
+                    <span class="badge badge-green">Eco-Impact Index</span>
+                </div>
+            </div>
+
+            <!-- Chart Matrix Visualizer -->
+            <div class="card chart-card">
+                <h2>📊 Waste Composition Summary Report</h2>
+                <div class="chart-container">
+                    <div class="bar-chart">
+                        <!-- Bars dynamically loaded with pure CSS & JS values to simulate the matplotlib plot -->
+                        <div class="bar-wrapper"><div class="bar" style="height: 90%; background-color: #2e7d32;" data-val="26,800 KG"></div><span class="bar-label">Cardboard</span></div>
+                        <div class="bar-wrapper"><div class="bar" style="height: 65%; background-color: #388e3c;" data-val="18,400 KG"></div><span class="bar-label">Sludge</span></div>
+                        <div class="bar-wrapper"><div class="bar" style="height: 70%; background-color: #43a047;" data-val="19,700 KG"></div><span class="bar-label">Aluminium</span></div>
+                        <div class="bar-wrapper"><div class="bar" style="height: 95%; background-color: #1b5e20;" data-val="27,500 KG"></div><span class="bar-label">Plastic</span></div>
+                        <div class="bar-wrapper"><div class="bar" style="height: 73%; background-color: #2e7d32;" data-val="20,400 KG"></div><span class="bar-label">Solvents</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right System Area: LLM Text Synthesis Console -->
+        <section class="card console-card">
+            <h2>💬 Generative Circular AI Advisor</h2>
+            <p class="subtitle">Real-time context window synthesis report matrix.</p>
+            <div class="console-box">
+                <pre id="llm-console">System idle. Execute pipeline on the left pane to compile executive briefs...</pre>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
